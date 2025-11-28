@@ -1,7 +1,11 @@
+import { useState } from "react";
 import logo from "../assets/logo.svg";
 import iconMenu from "../assets/icon-menu.svg";
+import Menu from "./Menu";
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="flex items-center justify-between w-full max-w-4xl mx-auto px-4 py-6">
       <a href="/">
@@ -10,6 +14,7 @@ export default function Header() {
       <button
         type="button"
         aria-label="Open menu"
+        onClick={() => setIsMenuOpen((prev) => !prev)}
         className="sm:hidden cursor-pointer"
       >
         <img src={iconMenu} alt="" />
@@ -19,7 +24,7 @@ export default function Header() {
         aria-label="main navigation"
         className="hidden sm:block text-preset-6 text-navy-600 "
       >
-        <ul className="flex gap-10 [&_a:hover]:text-red-500">
+        <ul className="flex gap-10 [&_a]:transition-colors [&_a:hover]:text-red-500">
           <li>
             <a href="#Home">Home</a>
           </li>
@@ -37,6 +42,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+      {isMenuOpen && <Menu onCloseMenu={() => setIsMenuOpen(false)} />}
     </header>
   );
 }
