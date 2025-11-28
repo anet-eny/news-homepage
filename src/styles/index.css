@@ -45,6 +45,21 @@
   --text-preset-7--line-height: 1.714; /* 24px / 14px ≈ 1.714 */
   --text-preset-7--font-weight: 700; /* Bold */
   --text-preset-7--letter-spacing: 4.38px;
+
+  /* COLORS */
+  /* Grey */
+  --color-grey-300: oklch(82% 0.008 286);
+  --color-grey-200: oklch(87% 0.003 286);
+
+  /* Navy */
+  --color-navy-950: oklch(11% 0.024 286);
+  --color-navy-600: oklch(44% 0.027 286);
+
+  /* Gold */
+  --color-gold-400: oklch(75% 0.095 72);
+
+  /* Red */
+  --color-red-500: oklch(65% 0.18 22);
 }
 
 @utility text-preset-1 {

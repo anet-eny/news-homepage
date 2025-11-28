@@ -1,0 +1,42 @@
+import logo from "../assets/logo.svg";
+import iconMenu from "../assets/icon-menu.svg";
+
+export default function Header() {
+  return (
+    <header className="flex items-center justify-between w-full max-w-4xl mx-auto px-4 py-6">
+      <a href="/">
+        <img src={logo} alt="w logo" />
+      </a>
+      <button
+        type="button"
+        aria-label="Open menu"
+        className="sm:hidden cursor-pointer"
+      >
+        <img src={iconMenu} alt="" />
+      </button>
+
+      <nav
+        aria-label="main navigation"
+        className="hidden sm:block text-preset-6 text-navy-600 "
+      >
+        <ul className="flex gap-10 [&_a:hover]:text-red-500">
+          <li>
+            <a href="#Home">Home</a>
+          </li>
+          <li>
+            <a href="#New">New</a>
+          </li>
+          <li>
+            <a href="#Popular">Popular</a>
+          </li>
+          <li>
+            <a href="#Trending">Trending</a>
+          </li>
+          <li>
+            <a href="#Categories">Categories</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
