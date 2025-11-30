@@ -1,6 +1,34 @@
+import { useEffect } from "react";
 import iconMenuClose from "../assets/icon-menu-close.svg";
 
 export default function Menu({ onCloseMenu }) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    const handleEscape = (e) => {
+      if (e.key === "Escape") onCloseMenu();
+    };
+
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [onCloseMenu]);
+
+  const menuItems = [
+    { href: "#home", label: "Home" },
+    { href: "#new", label: "New" },
+    { href: "#popular", label: "Popular" },
+    { href: "#trending", label: "Trending" },
+    { href: "#categories", label: "Categories" },
+  ];
+
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+    onCloseMenu();
+  };
+
   return (
     <div
       role="dialog"
@@ -18,51 +46,11 @@ export default function Menu({ onCloseMenu }) {
           <img src={iconMenuClose} alt="Close menu" />
         </button>
         <nav className="flex flex-col gap-6 text-preset-5 font-normal text-navy-950 [&_a]:transition-colors [&_a:hover]:text-red-500">
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              onCloseMenu();
-            }}
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              onCloseMenu();
-            }}
-          >
-            New
-          </a>
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              onCloseMenu();
-            }}
-          >
-            Popular
-          </a>
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              onCloseMenu();
-            }}
-          >
-            Trending
-          </a>
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              onCloseMenu();
-            }}
-          >
-            Categories
-          </a>
+          {menuItems.map((item) => (
+            <a key={item.href} href={item.href} onClick={handleLinkClick}>
+              {item.label}
+            </a>
+          ))}
         </nav>
       </div>
     </div>
