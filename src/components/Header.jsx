@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 import logo from "../assets/logo.svg";
 import iconMenu from "../assets/icon-menu.svg";
 import Menu from "./Menu";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isSmallScreen = useMediaQuery("(max-width: 40rem)");
+
+  useEffect(() => {
+    if (isMenuOpen && !isSmallScreen) {
+      setIsMenuOpen(false);
+    }
+  }, [isSmallScreen, isMenuOpen]);
 
   return (
     <header className="flex items-center justify-between w-full max-w-4xl mx-auto px-4 py-6">
