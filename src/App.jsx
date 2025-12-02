@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div className="mx-auto px-4 max-w-4xl">
+    <div className="mx-auto px-4 sm:px-8 max-w-4xl">
       <Header />
       <Hero />
     </div>
