@@ -1,6 +1,7 @@
 import imageMobile from "../assets/image-web-3-mobile.jpg";
 import imageDesktop from "../assets/image-web-3-desktop.jpg";
 import Button from "./Button";
+import FeaturedArcticles from "./FeaturedArticles";
 
 export default function Hero() {
   return (
@@ -21,6 +22,7 @@ export default function Hero() {
         fulfilling its promise?
       </p>
       <Button className="self-start">Read more</Button>
+      <FeaturedArcticles />
     </section>
   );
 }
