@@ -15,7 +15,7 @@ export default function Header() {
   }, [isSmallScreen, isMenuOpen]);
 
   return (
-    <header className="flex items-center justify-between w-full max-w-4xl mx-auto px-4 py-6">
+    <header className="flex items-center justify-between w-full py-8 sm:py-16">
       <a href="/">
         <img src={logo} alt="w logo" />
       </a>
