@@ -1,5 +1,6 @@
 import imageMobile from "../assets/image-web-3-mobile.jpg";
 import imageDesktop from "../assets/image-web-3-desktop.jpg";
+import Button from "./Button";
 
 export default function Hero() {
   return (
@@ -19,6 +20,7 @@ export default function Hero() {
         of the platforms back into the hands of the people. But is it really
         fulfilling its promise?
       </p>
+      <Button className="self-start">Read more</Button>
     </section>
   );
 }
