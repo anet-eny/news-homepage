@@ -1,7 +1,7 @@
-export default function FeaturedArcticles({ className = "" }) {
+export default function NewArcticles({ className = "" }) {
   return (
     <section
-      className={`bg-navy-950 [&_a]:block [&_h3]:text-preset-4 [&_h3:hover]:text-gold-400 [&_p]:text-preset-6 [&_h3]:text-gray-300 [&_p]:text-gray-300 [&_article]:py-8 px-6 py-4 ${className}`}
+      className={`bg-navy-950 [&_a]:block [&_h3]:text-preset-4 [&_h3:hover]:text-gold-400 [&_p]:text-preset-6 [&_h3]:text-gray-300 [&_p]:text-gray-300 [&_article]:py-8 px-6 pt-4 ${className}`}
     >
       <h2 className="text-preset-3 text-gold-400">New</h2>
       <article>

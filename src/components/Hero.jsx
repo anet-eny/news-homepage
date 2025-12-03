@@ -1,7 +1,7 @@
 import imageMobile from "../assets/image-web-3-mobile.jpg";
 import imageDesktop from "../assets/image-web-3-desktop.jpg";
 import Button from "./Button";
-import FeaturedArcticles from "./FeaturedArticles";
+import NewArcticles from "./NewArticles";
 
 export default function Hero() {
   return (
@@ -24,7 +24,7 @@ export default function Hero() {
         </p>
         <Button className="self-start">Read more</Button>
       </div>
-      <FeaturedArcticles className="sm:[grid-area:articles]" />
+      <NewArcticles className="sm:[grid-area:articles]" />
     </section>
   );
 }
