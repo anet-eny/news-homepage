@@ -15,10 +15,12 @@ This project is a solution to the News Homepage UI challenge on [Frontend Mentor
 
 ## Key Learnings
 
-- Learning and applying Tailwind CSS Grid system for responsive layouts - the primary goal of this project-
+- Learning and applying Tailwind CSS Grid system for responsive layouts - the primary goal of this project.
 
 - Reinforcing React Hooks fundamentals (useState, useEffect) and implementing a custom hook to monitor viewport width changes.
 
 ---
 
 ## View Project
+
+https://anet-eny.github.io/news-homepage/
